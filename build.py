@@ -313,6 +313,11 @@ def GetCmakeArgs( parsed_args ):
   if not OnWindows() and parsed_args.enable_coverage:
     cmake_args.append( '-DCMAKE_CXX_FLAGS=-coverage' )
 
+  cmake_args.append('-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON')
+  #cmake_args.append('-DEXTERNAL_LIBCLANG_PATH=/tmp/build/lib/libclang.so')
+  cmake_args.append('-DEXTERNAL_LIBCLANG_PATH=/cvmfs/sft.cern.ch/lcg/contrib/llvm/6.0.0binutils/x86_64-slc6-gcc7binutils-opt/lib/libclang.so')
+  cmake_args.append('-DPATH_TO_LLVM_ROOT=/cvmfs/sft.cern.ch/lcg/contrib/llvm/6.0.0binutils/x86_64-slc6-gcc7binutils-opt/')
+
   use_python2 = 'ON' if PY_MAJOR == 2 else 'OFF'
   cmake_args.append( '-DUSE_PYTHON2=' + use_python2 )
 
