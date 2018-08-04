@@ -24,6 +24,10 @@ from __future__ import division
 import sys
 import os
 
+import ctypes
+myldd = ctypes.LibraryLoader(ctypes.CDLL)
+myldd.LoadLibrary('/cvmfs/sft.cern.ch/lcg/contrib/gcc/6.2.0binutils/x86_64-centos7/lib64/libstdc++.so.6')
+
 sys.path.insert( 0, os.path.dirname( os.path.abspath( __file__ ) ) )
 from server_utils import SetUpPythonPath, CompatibleWithCurrentCore
 SetUpPythonPath()
