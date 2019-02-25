@@ -26,7 +26,7 @@ import os
 
 import ctypes
 myldd = ctypes.LibraryLoader(ctypes.CDLL)
-myldd.LoadLibrary('/cvmfs/sft.cern.ch/lcg/releases/gcc/8.1.0-97bb5/x86_64-slc6-gcc62-opt/lib64/libstdc++.so.6')
+myldd.LoadLibrary('/cvmfs/sft.cern.ch/lcg/releases/gcc/8.1.0-97bb5/x86_64-slc6/lib64/libstdc++.so.6')
 
 sys.path.insert( 0, os.path.dirname( os.path.abspath( __file__ ) ) )
 from server_utils import SetUpPythonPath, CompatibleWithCurrentCore

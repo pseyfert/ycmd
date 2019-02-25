@@ -315,8 +315,8 @@ def GetCmakeArgs( parsed_args ):
 
   cmake_args.append('-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON')
   #cmake_args.append('-DEXTERNAL_LIBCLANG_PATH=/tmp/build/lib/libclang.so')
-  cmake_args.append('-DEXTERNAL_LIBCLANG_PATH=/cvmfs/sft.cern.ch/lcg/contrib/llvm/7.0.0binutils/x86_64-slc6-gcc8-opt/lib/libclang.so')
-  cmake_args.append('-DPATH_TO_LLVM_ROOT=/cvmfs/sft.cern.ch/lcg/contrib/llvm/7.0.0binutils/x86_64-slc6-gcc8-opt/')
+  cmake_args.append('-DEXTERNAL_LIBCLANG_PATH=/cvmfs/sft.cern.ch/lcg/contrib/llvm/7.0.0binutils/x86_64-slc6/lib/libclang.so')
+  cmake_args.append('-DPATH_TO_LLVM_ROOT=/cvmfs/sft.cern.ch/lcg/contrib/llvm/7.0.0binutils/x86_64-slc6/')
 
   use_python2 = 'ON' if PY_MAJOR == 2 else 'OFF'
   cmake_args.append( '-DUSE_PYTHON2=' + use_python2 )
