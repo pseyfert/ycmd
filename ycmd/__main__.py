@@ -27,7 +27,7 @@ import os
 import ctypes
 myldd = ctypes.LibraryLoader(ctypes.CDLL)
 myldd.LoadLibrary('/cvmfs/sft.cern.ch/lcg/releases/gcc/8.2.0-3fa06/x86_64-centos7/lib64/libstdc++.so.6')
-myldd.LoadLibrary('/cvmfs/lhcb.cern.ch/lib/lcg/releases/LCG_88/Python/2.7.13/x86_64-centos7-gcc62-opt/lib/libpython2.7.so.1.0')
+# myldd.LoadLibrary('/cvmfs/lhcb.cern.ch/lib/lcg/releases/LCG_88/Python/2.7.13/x86_64-centos7-gcc62-opt/lib/libpython2.7.so.1.0')
 
 sys.path.insert( 0, os.path.dirname( os.path.abspath( __file__ ) ) )
 from server_utils import SetUpPythonPath, CompatibleWithCurrentCore
